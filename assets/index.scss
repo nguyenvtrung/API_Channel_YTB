@@ -1,0 +1,139 @@
+@font-face {
+  font-family: Trung;
+  src: url(TrungFont.otf);
+}
+body {
+  margin: 0;
+  background: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/f4133a104269577.5f5f913f613e8.jpg");
+  background-attachment: fixed;
+  object-fit: cover;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Trung; 
+  ::selection {
+    background: green;
+  }
+} /*# sourceMappingURL=index.css.map */
+
+$size: 78vw;
+.form {
+  width: $size;
+  height: 500px;
+  border-radius: 20px;
+  border: 2px solid green;
+  background: #9aff0024;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    ::selection {
+      background: none;
+    }
+    img {
+      width: calc($size / 10);
+      height: calc($size / 10);
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: -4px 10px 0 #5a5a5a;
+    }
+  }
+  .contents {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    ::selection {
+      background: none;
+    }
+    div {
+      font-size: 24px;
+      color: rgb(255, 255, 255);
+      font-weight: 600;
+      text-shadow: 1px 3px 3px black;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .sub::before {
+      content: "SUBSCRIBER";
+    }
+    .view::before {
+      content: "VIEW";
+    }
+    .video::before {
+      content: "Video";
+    }
+    .create::before {
+      content: "DATE";
+    }
+  }
+  .input {
+    display: flex;
+    justify-content: center;
+    input {
+      width: 50%;
+      height: 50px;
+      border-radius: 10px 0 0 10px;
+      border: none;
+      font-size: 20px;
+      padding: 10px;
+      &:focus-visible {
+        outline: none;
+        border: 1px solid green;
+      }
+    }
+    .btn {
+      border-radius: 0 10px 10px 0;
+      height: 50px;
+      min-width: 10%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .form {
+    .img {
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      img {
+        width: calc($size / 5);
+        height: calc($size / 5);
+        box-shadow: 0px 5px 0 green;
+      }
+    }
+    .contents {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      div {
+        font-size: 20px;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80%;
+          height: 2px;
+          background-color: green;
+        }
+      }
+    }
+  }
+}

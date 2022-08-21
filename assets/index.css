@@ -1,0 +1,146 @@
+@font-face {
+  font-family: Trung;
+  src: url(TrungFont.otf);
+}
+body {
+  margin: 0;
+  background: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/f4133a104269577.5f5f913f613e8.jpg");
+  background-attachment: fixed;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Trung;
+}
+* ::-moz-selection {
+  background: green;
+}
+* ::selection {
+  background: green;
+}
+
+/*# sourceMappingURL=index.css.map */
+.form {
+  width: 78vw;
+  height: 500px;
+  border-radius: 20px;
+  border: 2px solid green;
+  background: rgba(154, 255, 0, 0.1411764706);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.form .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.form .img ::-moz-selection {
+  background: none;
+}
+.form .img ::selection {
+  background: none;
+}
+.form .img img {
+  width: 7.8vw;
+  height: 7.8vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  box-shadow: -4px 10px 0 #5a5a5a;
+}
+.form .contents {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.form .contents ::-moz-selection {
+  background: none;
+}
+.form .contents ::selection {
+  background: none;
+}
+.form .contents div {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-shadow: 1px 3px 3px black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.form .contents .sub::before {
+  content: "SUBSCRIBER";
+}
+.form .contents .view::before {
+  content: "VIEW";
+}
+.form .contents .video::before {
+  content: "Video";
+}
+.form .contents .create::before {
+  content: "DATE";
+}
+.form .input {
+  display: flex;
+  justify-content: center;
+}
+.form .input input {
+  width: 50%;
+  height: 50px;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+}
+.form .input input:focus-visible {
+  outline: none;
+  border: 1px solid green;
+}
+.form .input .btn {
+  border-radius: 0 10px 10px 0;
+  height: 50px;
+  min-width: 10%;
+}
+
+@media (max-width: 375px) {
+  .form .img {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .form .img img {
+    width: 15.6vw;
+    height: 15.6vw;
+    box-shadow: 0px 5px 0 green;
+  }
+  .form .contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .form .contents div {
+    font-size: 20px;
+    position: relative;
+  }
+  .form .contents div::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background-color: green;
+  }
+}/*# sourceMappingURL=index.css.map */
